@@ -1,0 +1,214 @@
+﻿:root {
+    --color-fondo: #121212;
+    --color-superficie: #1E1E1E;
+    --color-primario: #03DAC6;
+    --color-texto-principal: #E0E0E0;
+    --color-texto-secundario: #A0A0A0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    padding-top: 80px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 5px solid #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: var(--color-superficie);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2c2c2c;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-interactivo {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid var(--color-primario);
+    border-radius: 50px;
+    background-color: var(--color-superficie);
+    color: var(--color-primario);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-interactivo:hover {
+    background-color: var(--color-primario);
+    color: var(--color-texto-principal);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(3, 218, 198, 0.2);
+}
+
+body {
+    padding-top: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 15px;
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    color: var(--color-texto-secundario);
+    font-weight: 600;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    background-color: #2a2a2a;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 3px solid var(--color-primario);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.project-tags span {
+    display: inline-block;
+    background-color: rgba(3, 218, 198, 0.1);
+    color: var(--color-primario);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar-personalizada {
+        padding: 10px 0;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .btn-interactivo {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+.navbar.bg-dark {
+    background-color: var(--color-superficie) !important;
+    border-bottom: 1px solid #2c2c2c !important;
+}
+
+.footer.border-top {
+    border-top: 1px solid #2c2c2c !important;
+}
+
+.footer a {
+    color: var(--color-primario);
+}
