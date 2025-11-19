@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - My_Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="~/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/favicon-16x16.png">
+    <link rel="manifest" href="~/site.webmanifest">
+    <title>@ViewData["Title"] - Diego Ojeda Diaz</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +30,12 @@
                             <a class="nav-link text-white" href="#sobre-mi">Sobre Mí</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white" href="#habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#educacion">Educación</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="#experiencia">Experiencia</a>
                         </li>
                         <li class="nav-item">
@@ -45,10 +55,15 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
             &copy; 2025 - Portafolio - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
+        <a id="btnVolverArriba" href="#" title="Volver arriba">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            </svg>
+        </a>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -61,7 +76,48 @@
           duration: 1000,
         });
     </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                strings: [
+                    'Estudiante de Ingeniería Informática y Sistemas.',
+                    'Desarrollador .NET Junior.',
+                    'Apasionado por la Tecnología.'
+                ],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+            };
+
+            var typed = new Typed('#texto-dinamico', options);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let btnVolverArriba = document.getElementById("btnVolverArriba");
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    btnVolverArriba.classList.add("show");
+                } else {
+                    btnVolverArriba.classList.remove("show");
+                }
+            };
+
+            btnVolverArriba.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

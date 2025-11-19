@@ -1,13 +1,13 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Mi Portafolio Profesional";
+    ViewData["Title"] = "Portafolio";
 }
 
 <header class="text-center">
     <img src="~/img/foto-perfil.jpg" alt="Foto de Perfil" class="profile-pic" />
     <h1>Diego Alessandro Ojeda Diaz</h1>
-    <p class="lead">Estudiante de Ingeniería Informática y Sistemas</p>
+    <p class="lead"><span id="texto-dinamico"></span></p>
 
     <a href="~/files/CV-DIEGO-OJEDA-DIAZ.pdf" class="btn-interactivo" download="CV - DIEGO OJEDA DIAZ" style="margin-top: 20px;">
         Descargar CV
@@ -19,11 +19,42 @@
 
 <section id="sobre-mi" class="my-5" data-aos="fade-up">
     <h2>Sobre Mí</h2>
-    <p>
-        Como estudiante de Ingeniería de Sistemas, busco incorporarme a una organización donde pueda aplicar y ampliar mis conocimientos, 
-        adquirir experiencia práctica y contribuir activamente al logro de objetivos. Mi meta es desarrollar mis habilidades técnicas 
-        y profesionales para crecer dentro del ámbito tecnológico.
+    <p class="text-center lead mb-5">
+        Como estudiante de Ingeniería de Sistemas, busco incorporarme a una organización donde pueda aplicar y ampliar mis conocimientos,
+        adquirir experiencia práctica y contribuir activamente al logro de objetivos.
     </p>
+
+    <div class="values-container">
+        <div class="value-card">
+            <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                    <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.762-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6 8.5a.5.5 0 0 1 .5-.5h.5a.5.5 0 0 1 0 1h-.5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <h3>Aprendizaje Continuo</h3>
+            <p>Me apasiona mantenerme actualizado con las últimas tecnologías y frameworks del ecosistema .NET para aportar soluciones modernas y eficientes.</p>
+        </div>
+
+        <div class="value-card">
+            <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-puzzle-fill" viewBox="0 0 16 16">
+                    <path d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H5.5v.502a2.5 2.5 0 0 0 2.461 2.461c.407.033.82.033 1.233-.002.434-.037.868-.063 1.307-.063.48 0 .95.03 1.41.074.455.043.91.103 1.357.19.428.083.848.195 1.25.333A1.5 1.5 0 0 1 16 4.605v.89c-.033.407-.033.82-.002 1.233.037.434.063.868.063 1.307 0 .48-.03.95-.074 1.41-.043.455-.103.91-.19 1.357a4.12 4.12 0 0 1-.333 1.25 1.5 1.5 0 0 1-1.495 1.007h-.89a2.502 2.502 0 0 0-2.461-2.461c-.407-.033-.82-.033-1.233.002-.434.037-.868.063-1.307.063-.48 0-.95-.03-1.41-.074a4.12 4.12 0 0 1-1.357-.19c-.428-.083-.848-.195-1.25-.333A1.5 1.5 0 0 1 0 11.395v-.89c.033-.407.033-.82.002-1.233a4.12 4.12 0 0 1-.063-1.307c0-.48.03-.95.074-1.41.043-.455.103.91.19 1.357.083.428.195.848.333 1.25A1.5 1.5 0 0 1 3.112 3.645Z" />
+                </svg>
+            </div>
+            <h3>Resolución de Problemas</h3>
+            <p>Disfruto analizando desafíos complejos y descomponiéndolos en partes manejables para encontrar soluciones lógicas y efectivas.</p>
+        </div>
+
+        <div class="value-card">
+            <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                </svg>
+            </div>
+            <h3>Código Limpio</h3>
+            <p>Creo en la importancia de escribir código mantenible, legible y bien estructurado que facilite la colaboración y la escalabilidad futura del proyecto.</p>
+        </div>
+    </div>
 </section>
 
 <section id="habilidades" class="my-5" data-aos="fade-up">
@@ -61,27 +92,79 @@
     </div>
 </section>
 
+<section id="educacion" class="my-5" data-aos="fade-up">
+    <h2>Educación e Idiomas</h2>
+    <div class="education-card">
+        <h3>Ingeniería Informática y de Sistemas</h3>
+        <h4>Universidad San Ignacio de Loyola | 2022 – 2026</h4>
+        <p>Cursos Relevantes:</p>
+        <div class="course-tags">
+            <span>Estructuras de Datos y Algoritmos</span>
+            <span>Bases de Datos Avanzadas</span>
+            <span>Desarrollo de Software</span>
+            <span>Redes y Conectividad</span>
+        </div>
+
+        <hr class="card-divider">
+
+        <div>
+            <h3>Idiomas</h3>
+            <div class="language-item">
+                <span>Español</span>
+                <div class="language-level">
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <small>Nativo</small>
+                </div>
+            </div>
+            <div class="language-item">
+                <span>Inglés</span>
+                <div class="language-level">
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <div class="level-dot full"></div>
+                    <div class="level-dot empty"></div>
+                    <div class="level-dot empty"></div>
+                    <small>Avanzado (B2/C1)</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="experiencia" class="my-5" data-aos="fade-up">
     <h2>Experiencia Profesional</h2>
+    <div class="timeline-container">
 
-    <div class="job">
-        <h3>Ejecutivo de Marketing</h3>
-        <h4>Global American English | Dic 2023 - Mar 2024</h4>
-        <ul>
-            <li>Llamadas a clientes potenciales</li>
-            <li>Gestión y coordinación mediante entrevistas virtuales</li>
-            <li>Planificación y ejecución de campañas publicitarias</li>
-        </ul>
-    </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Ejecutivo de Marketing</h3>
+                <h4>Global American English | Dic 2023 – Mar 2024</h4>
+                <ul>
+                    <li>Llamadas a clientes potenciales.</li>
+                    <li>Gestión y coordinación mediante entrevistas virtuales.</li>
+                    <li>Planificación y ejecución de campañas publicitarias.</li>
+                </ul>
+            </div>
+        </div>
 
-    <div class="job">
-        <h3>Auxiliar Logístico</h3>
-        <h4>Oslo Logistics | Ene 2025 - mar 2025</h4>
-        <ul>
-            <li>Picking y packing</li>
-            <li>Verificación y control mediante RF</li>
-        </ul>
-    </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Auxiliar Logístico</h3>
+                <h4>Oslo Logistics | Ene 2025 – Mar 2025</h4>
+                <ul>
+                    <li>Picking y packing de productos.</li>
+                    <li>Verificación y control de inventario mediante RF.</li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
 </section>
 
 <section id="certificados" class="my-5" data-aos="fade-up">
@@ -104,7 +187,7 @@
     <div class="projects-container">
         <div class="project-card">
             <h3>Proyecto Nuevo</h3>
-            <p>Una descripción breve y concisa de lo que hace el proyecto, el problema que resuelve y tu rol en él.</p>
+            <p>Descripcion breve del proyecto.</p>
             <div class="project-tags">
                 <span>.NET Core</span>
                 <span>Razor Pages</span>
@@ -124,7 +207,7 @@
                 <span>CSS3</span>
             </div>
             <div class="project-links">
-                <a href="[ENLACE_AL_CÓDIGO_DE_TU_PORTAFOLIO]" target="_blank">Ver Código</a>
+                <a href="https://github.com/Piooolin/Porfafolio-Website.git" target="_blank">Ver Código</a>
             </div>
         </div>
     </div>
